@@ -1,0 +1,38 @@
+body {
+    background-color: #f3f6fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-card {
+    background: white;
+    border-radius: 15px;
+    max-width: 500px;
+}
+
+.form-control, .form-select {
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #0066cc;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #004c99;
+}
+
+.btn-secondary {
+    border-radius: 10px;
+}
+
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+h2 {
+    letter-spacing: 0.5px;
+}
+

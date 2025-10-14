@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container mt-5">
+    <div class="form-card mx-auto p-4 shadow">
+        <h2 class="text-center mb-4 text-primary fw-bold">Event Registration</h2>
+        <form action="/register" method="POST">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Last Name</label>
+                <input type="text" name="lastname" class="form-control" placeholder="Enter your last name" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-semibold">First Name</label>
+                <input type="text" name="firstname" class="form-control" placeholder="Enter your first name" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Sex</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sex" value="Male" required>
+                    <label class="form-check-label">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sex" value="Female" required>
+                    <label class="form-check-label">Female</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Institution</label>
+                <select name="institution" class="form-select" required>
+                    <option value="" disabled selected>Select Institution</option>
+                    <option value="PSU">PSU</option>
+                    <option value="UCU">UCU</option>
+                    <option value="PU">PU</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Email</label>
+                <input type="email" name="email" class="form-control" placeholder="example@email.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">REGISTER</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Output</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container mt-5">
+    <div class="form-card mx-auto p-4 shadow">
+        <h2 class="text-center mb-4 text-success fw-bold">Registration Successful!</h2>
+        <ul class="list-group mb-3">
+            <li class="list-group-item"><strong>Last Name:</strong> {{ lastname }}</li>
+            <li class="list-group-item"><strong>First Name:</strong> {{ firstname }}</li>
+            <li class="list-group-item"><strong>Sex:</strong> {{ sex }}</li>
+            <li class="list-group-item"><strong>Institution:</strong> {{ institution }}</li>
+            <li class="list-group-item"><strong>Email:</strong> {{ email }}</li>
+        </ul>
+        <div class="text-center">
+            <a href="/" class="btn btn-secondary">Back to Form</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
