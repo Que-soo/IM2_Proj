@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="container">
+<div class="logout">
+    <a href="/logout">Logout</a>
+</div>
+
+{% include 'flash.html' %}
+
+<h2>Welcome {{ user.username }}</h2>
+
+Full Name
+<input type="text" value="{{ user.name }}">
+
+Sex <br>
+<input type="radio" {% if user.sex=='Male' %}checked{% endif %}> Male
+<input type="radio" {% if user.sex=='Female' %}checked{% endif %}> Female
+<br><br>
+
+DOB
+<input type="date" value="{{ user.dob.strftime('%Y-%m-%d')}}">
+
+Username
+<input type="text" value="{{ user.username }}">
+
+Password
+<input type="password" value="{{ user.password }}">
+</div>
